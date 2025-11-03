@@ -12,10 +12,13 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "M | Qasim",
-  description: "Portfolio website",
-};
+export const metadata = {
+  title: 'Muhammad | Qasim',
+  description: 'Full Stack Developer Portfolio - React, Node.js, MongoDB',
+  icons: {
+    icon: '/icon.png', // or '/icon.png'
+  },
+}
 
 export default function RootLayout({
   children,

@@ -44,7 +44,7 @@ const Portfolio = () => {
     email: "mrqasimhaleem@gmail.com",
     whatsapp: "+923038843954", // Add your WhatsApp number with country code
     github: "https://github.com/qasimhaleem",
-    linkedin: "https://linkedin.com/in/yourusername",
+    linkedin: "https://www.linkedin.com/in/qasim-haleem-200557286/",
     profileImage: "/pic.jpg",
 
     about: {
@@ -96,8 +96,8 @@ const Portfolio = () => {
         description: "A comprehensive CRUD application demonstrating complete database operations with an intuitive interface. Built with modern best practices, featuring real-time updates, advanced filtering, pagination, authentication, and role-based access control.",
         tech: ["Next.js", "Express.js", "PostgreSQL", "Tailwind CSS"],
         image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
-        github: "https://github.com/yourusername/crud-app",
-        live: "https://crud-demo.com",
+        github: "https://github.com/qasimhaleem/CRUD-Web-App",
+        live: "https://crud-web-app-xi.vercel.app/",
         gradient: "from-green-500 to-emerald-500"
       },
       {
@@ -123,8 +123,8 @@ const Portfolio = () => {
         description: "Comprehensive pandemic tracking dashboard with global statistics, country-wise data, vaccination progress, and trend analysis. Features interactive charts, historical data comparison, news integration, and safety guidelines to keep users informed.",
         tech: ["Vue.js", "Node.js", "COVID-19 API", "D3.js"],
         image: "https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?w=600&h=400&fit=crop",
-        github: "https://github.com/yourusername/covid-tracker",
-        live: "https://covid-tracker-demo.com",
+        github: "https://github.com/qasimhaleem/Covid-Web",
+        live: "https://qasimhaleem.github.io/Covid-Web/",
         gradient: "from-indigo-500 to-purple-500"
       }
     ]
@@ -143,12 +143,16 @@ const Portfolio = () => {
       <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-slate-950/90 backdrop-blur-md shadow-lg shadow-cyan-500/10' : 'bg-transparent'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <div className="text-2xl font-bold">
-              <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-500 bg-clip-text text-transparent">
-                {config.name}
-              </span>
-              <span className="text-cyan-400">.</span>
-            </div>
+            <button
+              onClick={() => scrollToSection('home')}
+              className="flex items-center cursor-pointer group"
+            >
+              <img
+                src="/icon.png"
+                alt="Logo"
+                className="w-12 h-12 rounded-full border-2 border-cyan-400 shadow-lg shadow-cyan-500/50 hover:scale-110 transition-all group-hover:rotate-12"
+              />
+            </button>
 
             <div className="hidden md:flex space-x-8">
               {['home', 'about', 'skills', 'projects', 'contact'].map((item) => (
